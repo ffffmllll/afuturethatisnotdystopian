@@ -7,5 +7,48 @@
     <main>
         <h1>Welcome to My Website</h1>  
     </main>
+    <main>
+        Click on a list item to select it.
+  <br>
+      
+  <ul id="ul">
+    <li>Finn</li>
+    <li>Tina</li>
+    <li>Rey</li>
+    <li>Alicja</li>
+    
+  </ul>
+
+  <script>
+    ul.onclick = function(event) {
+      if (event.target.tagName != "LI") return;
+
+      if (event.ctrlKey || event.metaKey) {
+        toggleSelect(event.target);
+      } else {
+        singleSelect(event.target);
+      }
+
+    }
+
+    // prevent unneeded selection of list elements on clicks
+    ul.onmousedown = function() {
+      return false;
+    };
+
+    function toggleSelect(li) {
+      li.classList.toggle('selected');
+    }
+
+    function singleSelect(li) {
+      let selected = ul.querySelectorAll('.selected');
+      for(let elem of selected) {
+        elem.classList.remove('selected');
+      }
+      li.classList.add('selected');
+    }
+
+  </script>
+    </main>
   </body>
 </html>
