@@ -12,7 +12,7 @@
     </header>
 
     <main>
-        <form action="index.html" method="post">
+        <form onsubmit="redirectToFinalPage(); return false;">
             <label for="problemExplanation">Problem Explanation:</label>
             <textarea id="problemExplanation" name="problemExplanation" rows="4" cols="50" required></textarea>
 
@@ -21,6 +21,12 @@
             <input type="submit" value="Submit">
         </form>
     </main>
+
+    <script>
+        function redirectToFinalPage() {
+            window.location.href = "final.html";
+        }
+    </script>
 
 </body>
 </html>
