@@ -1,32 +1,43 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <script src="https://aframe.io/releases/1.2.0/aframe.min.js"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Model Viewer Page</title>
 </head>
-<body>
-  <a-scene>
-    <!-- First model-viewer -->
-    <a-entity position="-2 0 0">
-      <model-viewer src="try.glb" ar camera-controls></model-viewer>
-    </a-entity>
+<body style="margin: 0; overflow: hidden;">
 
-    <!-- Second model-viewer -->
-    <a-entity position="0 0 0">
-      <model-viewer src="try.glb" ar camera-controls></model-viewer>
-    </a-entity>
+    <!-- Top Left Corner -->
+    <model-viewer alt="Neil Armstrong's Spacesuit - Top Left" style="position: absolute; top: 0; left: 0; width: 50vw; height: 50vh;"
+        src="https://modelviewer.dev/shared-assets/models/NeilArmstrong.glb"
+        ar environment-image="https://modelviewer.dev/shared-assets/environments/moon_1k.hdr"
+        poster="https://modelviewer.dev/shared-assets/models/NeilArmstrong.webp"
+        shadow-intensity="1" camera-controls touch-action="pan-y">
+    </model-viewer>
 
-    <!-- Third model-viewer -->
-    <a-entity position="2 0 0">
-      <model-viewer src="try.glb" ar camera-controls></model-viewer>
-    </a-entity>
+    <!-- Top Right Corner -->
+    <model-viewer alt="Neil Armstrong's Spacesuit - Top Right" style="position: absolute; top: 0; right: 0; width: 50vw; height: 50vh;"
+        src="https://modelviewer.dev/shared-assets/models/NeilArmstrong.glb"
+        ar environment-image="https://modelviewer.dev/shared-assets/environments/moon_1k.hdr"
+        poster="https://modelviewer.dev/shared-assets/models/NeilArmstrong.webp"
+        shadow-intensity="1" camera-controls touch-action="pan-y">
+    </model-viewer>
 
-    <!-- Fourth model-viewer -->
-    <a-entity position="4 0 0">
-      <model-viewer src="try.glb" ar camera-controls></model-viewer>
-    </a-entity>
-  </a-scene>
+    <!-- Bottom Left Corner -->
+    <model-viewer alt="Neil Armstrong's Spacesuit - Bottom Left" style="position: absolute; bottom: 0; left: 0; width: 50vw; height: 50vh;"
+        src="https://modelviewer.dev/shared-assets/models/NeilArmstrong.glb"
+        ar environment-image="https://modelviewer.dev/shared-assets/environments/moon_1k.hdr"
+        poster="https://modelviewer.dev/shared-assets/models/NeilArmstrong.webp"
+        shadow-intensity="1" camera-controls touch-action="pan-y">
+    </model-viewer>
+
+    <!-- Bottom Right Corner -->
+    <model-viewer alt="Neil Armstrong's Spacesuit - Bottom Right" style="position: absolute; bottom: 0; right: 0; width: 50vw; height: 50vh;"
+        src="https://modelviewer.dev/shared-assets/models/NeilArmstrong.glb"
+        ar environment-image="https://modelviewer.dev/shared-assets/environments/moon_1k.hdr"
+        poster="https://modelviewer.dev/shared-assets/models/NeilArmstrong.webp"
+        shadow-intensity="1" camera-controls touch-action="pan-y">
+    </model-viewer>
+
 </body>
 </html>
-
